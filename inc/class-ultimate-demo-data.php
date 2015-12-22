@@ -60,7 +60,7 @@ class Ultimate_Demo_Data
 
 		$query .= " UPDATE wuddemo_usermeta SET meta_key = REPLACE(meta_key, '{$wpdb->prefix}', 'wuddemo_');";
 		$query .= " UPDATE wuddemo_options SET option_name = REPLACE(option_name, '{$wpdb->prefix}', 'wuddemo_');";
-		$query .= " REPLACE INTO wuddemo_options(option_name, option_value) VALUES('udm_last_run', NOW());";
+		$query .= " REPLACE INTO wuddemo_options(option_name, option_value) VALUES('wud_last_run', NOW());";
 
 		$query .= " END;";
 

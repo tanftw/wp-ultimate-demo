@@ -67,7 +67,7 @@ function wud_setting( $field = null )
  */
 function wud_get_last_cleanup_time()
 {
-	return get_option( 'udm_last_run' );
+	return get_option( 'wud_last_run' );
 }
 
 /**
