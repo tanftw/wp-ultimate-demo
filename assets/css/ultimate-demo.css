@@ -1,0 +1,21 @@
+#countdown-wrapper{
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 600px;
+	z-index: 9999;
+	background: tomato;
+	color: #fff;
+	display: none;
+	border-radius: 0 4px 0 0;
+	padding: 5px 10px;
+}
+
+tr.alert td{
+	background: #00A0D2;
+	color: #fff;
+}
+
+div[role=conditional-logic]{
+	display: inline;
+}
