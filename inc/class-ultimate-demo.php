@@ -1,23 +1,40 @@
 <?php
-
+/**
+ * There heart of WP Ultimate Demo plugin which load scripts, styles, setup permissions, authenication...
+ * 
+ * @author Tan Nguyen <tan@binaty.org>
+ */
 class Ultimate_Demo
 {
+	/**
+	 * Constructor only contains actions and filters
+	 *
+	 * @return  void
+	 */
 	public function __construct()
-	{		
+	{
+		// Add admin notices
 		add_action( 'admin_notices', array( $this, 'admin_notices' ) );
 
+		// Enqueue scripts and styles to all pages
 		add_action( 'admin_enqueue_scripts', array( $this, 'enqueue' ) );
 
+		// Setup files permissions and cleanup demo temporary data when needed
 		add_action( 'admin_init', array( $this, 'setup' ) );
 
+		// Print countdown bar on footer
 		add_action( 'admin_footer', array( $this, 'countdown_bar' ) );
 
+		// Prefill user data when this setting is enabled
 		add_action( 'login_footer', array( $this, 'prefill_user_data' ) );
 
+		// Auto login when this setting is enabled
 		add_action( 'init', array( $this, 'auto_login' ) );
 
-		add_filter( 'login_message', array($this, 'login_message'));
+		// Print login message when this setting is enabled
+		add_filter( 'login_message', array( $this, 'login_message' ) );
 
+		// Disallow disable this plugin if current user isn't activate this plugin
 		add_filter( 'plugin_action_links', array( $this, 'disable_deactivation' ), 10, 4 );
 	}
 
