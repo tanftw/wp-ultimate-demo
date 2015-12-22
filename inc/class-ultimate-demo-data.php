@@ -156,6 +156,9 @@ class Ultimate_Demo_Data
 	{
 		global $wpdb;
 
+		if ( wud_user_uneditable() )
+			wp_die( 'Hacked?' );
+		
 		$tables = self::get_tables();
 
 		// Remove .demo and .demo_disabled files
