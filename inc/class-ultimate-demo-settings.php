@@ -35,7 +35,13 @@ class Ultimate_Demo_Settings
 	public function add_menu()
 	{
 		if ( wud_user_editable() )
-			$this->page_hook = add_options_page( 'WP Ultimate Demo', 'WP Ultimate Demo', 'manage_options', 'wp-ultimate-demo', array( $this, 'show' ) );		
+			$this->page_hook = add_options_page( 
+				__( 'WP Ultimate Demo', 'wud' ), 
+				__( 'WP Ultimate Demo', 'wud' ), 
+				'manage_options', 
+				'wp-ultimate-demo', 
+				array( $this, 'show' ) 
+			);		
 	}
 
 	/**
@@ -99,7 +105,7 @@ class Ultimate_Demo_Settings
 		// Display success message when settings saved
 		if ( isset( $_GET['success'] ) ) : ?>
 		<div id="message" class="updated notice is-dismissible">
-			<p>Settings <strong>saved</strong>.</p>
+			<p><?php _e( 'Settings <strong>saved</strong>.', 'wud' ); ?></p>
 			<button type="button" class="notice-dismiss"><span class="screen-reader-text">Dismiss this notice.</span></button>
 		</div>
 		<?php endif; ?>
@@ -110,17 +116,19 @@ class Ultimate_Demo_Settings
 			<div class="meta-box-sortables">
               	<div class="postbox">
                 	<div class="handlediv" title="Click to toggle"> <br></div>
-                  	<h3 class="hndle ui-sortable-handle">General</h3>
+                  	<h3 class="hndle ui-sortable-handle"><?php _e( 'General', 'wud' ); ?></h3>
                   	<div class="inside">
                     	<table class="form-table">
                     		<tr valign="top">
-                    			<th>Offline Mode</th>
+                    			<th><?php _e( 'Offline Mode', 'wud' ); ?></th>
                     			<td>
                     				<label>
                     					<?php $this->checkbox( 'offline_mode', ! wud_is_demo_active() ); ?>
-                    					Disable demo, unfreeze data, only admin can access and make changes 
+                    					<?php _e( 'Disable demo, unfreeze data, only admin can access and make changes', 'wud' ); ?>
                     				</label>
-                    				<p class="description">Notice: You'll probably get logged out after change this setting</p>
+                    				<p class="description">
+                    					<?php _e( "Notice: You'll probably get logged out after change this setting", 'wud' ); ?>
+                    				</p>
                     			</td>
                     		</tr>
 
@@ -128,7 +136,7 @@ class Ultimate_Demo_Settings
 							
 							<tr class="alert">
 								<td colspan="2">
-									All demo options are hidden in online mode. Switch to <strong>Offline mode</strong> to change demo settings.
+									<?php _e( 'All demo options are hidden in online mode. Switch to <strong>Offline mode</strong> to change demo settings.', 'wud' ); ?>
 								</td>
 							</tr>
 			
@@ -136,46 +144,46 @@ class Ultimate_Demo_Settings
 
                     		<?php if ( ! wud_is_demo_active() ) : ?>
                     		<tr valign="top">
-                    			<th>Security</th>
+                    			<th><?php _e( 'Security', 'wud' ); ?></th>
                     			<td>
                     				<p>
                     				<label>
                     					<?php $this->checkbox( 'disable_file_editing' ); ?>
-                    					Don't let users modify your files, upgrade website, themes, and plugins <code>Recommended</code>
+                    					<?php _e( "Don't let users modify your files, upgrade website, themes, and plugins <code>Recommended</code>", 'wud' ); ?>
                     				</label>
                     				</p>
 
                     				<p>
                     				<label>
                     					<?php $this->checkbox( 'hide_from_anyone' ) ?>
-                    					Hide this plugin from any one except me
-                    					<code>Recommended</code>
+                    					<?php _e( 'Hide this plugin from any one except me <code>Recommended</code>', 'wud' ); ?>
                     				</label>
                     				</p>
                     			</td>
                     		</tr>
 
                     		<tr valign="top">
-                    			<th>Data Cleanup</th>
+                    			<th><?php _e( 'Data Cleanup', 'wud' ); ?></th>
                     			<td>
                     				<?php $this->input( 'number', 'cleanup_offset', null, array('min' => 1, 'max' => 99) ); ?>
-                    				<p class="description">Auto cleanup data after (hours)</p>
+                    				<p class="description"><?php _e( 'Auto cleanup data after (hours)' ); ?></p>
                     			</td>
                     		</tr>
 
 
                     		<tr valign="top">
-                    			<th>Countdown</th>
+                    			<th><?php _e( 'Countdown', 'wud' ); ?></th>
                     			<td>
                     				<label>
                     					<?php $this->checkbox( 'show_countdown' ); ?>
-                    					Show countdown bar when session is going to expired <div role="conditional-logic" id="show-countdown-child-condition"> in
+                    					<?php _e( 'Show countdown bar when session is going to expired', 'wud' ); ?> 
+                    					<div role="conditional-logic" id="show-countdown-child-condition"> <?php _e( 'in', 'wud' ); ?>
 										<?php $this->input( 'number', 'countdown_interval' ); ?>
-                    					seconds	
+                    					<?php _e( 'seconds', 'wud' ); ?>	
                     				</label>
 									<br><br>
 									<label>
-										<p class="description">With Template</p> <br>
+										<p class="description"><?php _e( 'With Template', 'wud' ); ?></p> <br>
 										<?php $this->textarea( 'countdown_template', null, array(
 											'rows' => 3,
 											'cols' => 90
@@ -194,22 +202,29 @@ class Ultimate_Demo_Settings
             <div class="meta-box-sortables">
               	<div class="postbox">
                 	<div class="handlediv" title="Click to toggle"> <br></div>
-                  	<h3 class="hndle ui-sortable-handle">Login</h3>
+                  	<h3 class="hndle ui-sortable-handle"><?php _e( 'Login', 'wud' ); ?></h3>
                   	<div class="inside">
                     	<table class="form-table">
                     		<tr valign="top">
-                    			<th>Auto Login</th>
+                    			<th><?php _e( 'Auto Login', 'wud' ); ?></th>
                     			<td>
                     				<label>
-                    					<?php $this->select( 'auto_login', array( 'Disable', 'Enable', 'Prefill' ) ); ?>
+                    					<?php 
+                    						$this->select( 'auto_login', array( 
+	                    						__( 'Disable', 'wud' ), 
+	                    						__( 'Enable', 'wud' ), 
+	                    						__( 'Prefill', 'wud' )
+                    						) ); 
+                    					?>
                     				</label>
-                    				<p class="description">If <b>enable</b>, any one can bypass login form. <br>
-                    				If you choose <b>prefill</b>, the login form is prefilled, users don't have to enter user name and password </p>
+                    				<p class="description">
+                    				<?php _e( "If <b>enable</b>, any one can bypass login form. <br> If you choose <b>prefill</b>, the login form is prefilled, users don't have to enter user name and password", 'wud' ); ?>
+                    				</p>
                     			</td>
                     		</tr>
 							
                     		<tr valign="top" id="auto-login-as">
-                    			<th>Auto Login with User</th>
+                    			<th><?php _e( 'Auto Login with User', 'wud' ); ?></th>
                     			<td>
                     				<?php 
                     					wp_dropdown_users( array(
@@ -221,21 +236,23 @@ class Ultimate_Demo_Settings
                     		</tr>
 
                     		<tr valign="top" id="prefill-settings">
-                    			<th>Prefill Settings</th>
+                    			<th><?php _e( 'Prefill Settings', 'wud' ); ?></th>
                     			<td>
-                    				<?php $this->text( 'user_login', null, array('placeholder' => 'User Login') ); ?>
-                    				<?php $this->text( 'user_pass', null, array('placeholder' => 'User Password') ); ?>
+                    				<?php $this->text( 'user_login', null, array( 'placeholder' => __( 'User Login', 'wud' ) ) ); ?>
+                    				<?php $this->text( 'user_pass', null, array( 'placeholder' => __( 'User Password', 'wud' ) ) ); ?>
                     			</td>
                     		</tr>
 							
 							<tr valign="top" id="login-message">
-                    			<th>Login Message</th>
+                    			<th><?php _e( 'Login Message', 'wud' ); ?></th>
                     			<td>
                     				<?php $this->textarea( 'login_message', '', array(
                     					'rows' => 3,
                     					'cols' => 90
                     				) ); ?>
-                    				<p class="description">Print login message on the top of login form. Leaves blank to disable this feature</p>
+                    				<p class="description">
+                    					<?php _e( 'Print login message on the top of login form. Leaves blank to disable this feature' ); ?>
+                    				</p>
                     			</td>
                     		</tr>
                     	</table>
@@ -246,14 +263,14 @@ class Ultimate_Demo_Settings
             <div class="meta-box-sortables">
               	<div class="postbox">
                 	<div class="handlediv" title="Click to toggle"> <br></div>
-                  	<h3 class="hndle ui-sortable-handle">Manual Cleanup Data</h3>
+                  	<h3 class="hndle ui-sortable-handle"><?php _e( 'Manual Cleanup Data', 'wud' ); ?></h3>
                   	<div class="inside">
                     	<table class="form-table">
                     		<tr valign="top">
                     			<th></th>
                     			<td>
-                    				<a href="<?php echo esc_url( add_query_arg('cleanup', 1) ); ?>" class="button">Cleanup</a>
-                    				<p class="description">Cleanup all user entered demo data. Take website back to your last modified time.</p>
+                    				<a href="<?php echo esc_url( add_query_arg('cleanup', 1) ); ?>" class="button"><?php _e( 'Cleanup', 'wud' ); ?></a>
+                    				<p class="description"><?php _e( 'Cleanup all user entered demo data. Take website back to your last modified time.', 'wud' ); ?></p>
                     			</td>
                     		</tr>
                     	</table>

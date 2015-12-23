@@ -6,6 +6,7 @@ Description: Seamless & Fast WP Demo Solution. Just click and run.
 Version: 1.0
 Author: Tan Nguyen <tan@binaty.org>
 Author URI: http://www.binaty.org
+Text Domain: wud
 License: GPL2+
 */
 
@@ -45,10 +46,19 @@ if ( file_exists( ABSPATH . '.demo' ) )
 	define( 'UPLOADS', 'wp-content/uploads-demo' );
 }
 
+// Helper functions
 include WUD_INC_DIR . 'helpers.php';
+
+// Interact with File System
 include WUD_INC_DIR . 'class-ultimate-demo-file-system.php';
+
+// Setting pages and API
 include WUD_INC_DIR . 'class-ultimate-demo-settings.php';
+
+// Interact with all data
 include WUD_INC_DIR . 'class-ultimate-demo-data.php';
+
+// Main Class 
 include WUD_INC_DIR . 'class-ultimate-demo.php';
 
 register_activation_hook( __FILE__, array( 'Ultimate_Demo_Data', 'setup' ) );

@@ -22,7 +22,7 @@ function wud_default_settings()
 		'cleanup_offset'		=> 24,
 		'show_countdown'		=> true, 
 		'countdown_interval'	=> 300, // 300 seconds 
-		'countdown_template'	=> 'Your session is going to expires in %time% seconds', 
+		'countdown_template'	=> __( 'Your session is going to expires in %time% seconds', 'wud' ), 
 		'auto_login'			=> 2, // Prefill
 		'auto_login_as'			=> '',
 		'user_login'			=> '',

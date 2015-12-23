@@ -36,6 +36,8 @@ class Ultimate_Demo
 
 		// Disallow disable this plugin if current user isn't activate this plugin
 		add_filter( 'plugin_action_links', array( $this, 'disable_deactivation' ), 10, 4 );
+
+		add_action( 'plugins_loaded', array( $this, 'i18n' ) );
 	}
 
 	public function setup()
@@ -54,6 +56,16 @@ class Ultimate_Demo
 		{
 			Ultimate_Demo_Data::cleanup();
 		}
+	}
+
+	/**
+	 * Load Text Domain for Translation
+	 * 
+	 * @return void
+	 */
+	public function i18n()
+	{
+		load_plugin_textdomain( 'wud', false, basename( WUD_DIR ) . '/lang/' );
 	}
 
 	/**
