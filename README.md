@@ -7,5 +7,3 @@ All you need is "Activate" plugin and turn on demo mode whenever you need.
 
 ## Official Documentation
 Documentation located at our [public repository](https://github.com/tanng/wp-ultimate-demo-docs), you're welcome to update it
-
-## Contributing
