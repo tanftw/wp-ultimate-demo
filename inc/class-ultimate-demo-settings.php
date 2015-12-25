@@ -8,12 +8,14 @@ class Ultimate_Demo_Settings
 {
 	/**
 	 * Mark the setting page hook so other can hook into it
+	 * 
 	 * @var String
 	 */
 	public $page_hook;
 
 	/**
 	 * Initial method. All settings page actions and filters are defined here
+	 * 
 	 * @return  void
 	 */
 	public function __construct()
@@ -80,7 +82,7 @@ class Ultimate_Demo_Settings
 
 		foreach ( wud_default_settings() as $field => $default )
 		{
-			$settings[$field] =  isset( $_POST[$field] ) ? $_POST[$field] : '';
+			$settings[$field] =  isset( $_POST[$field] ) ? esc_attr( $_POST[$field] ) : '';
 		}
 
 		$settings['only_show_for'] = get_current_user_id();

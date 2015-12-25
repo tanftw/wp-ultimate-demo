@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: WP Ultimate Demo
-Plugin URI: http://www.ultimatedemo.binaty.org
+Plugin URI: http://www.ultimate.binaty.org
 Description: Seamless & Fast WP Demo Solution. Just click and run.
 Version: 1.0
 Author: Tan Nguyen <tan@binaty.org>

@@ -18,7 +18,7 @@ jQuery( function($) {
 		{
 			if ( timeLeft < 0 )
 				return;
-
+			
 			if ( timeLeft <= interval ) {
 				$countdown.html(timeLeft);
 
