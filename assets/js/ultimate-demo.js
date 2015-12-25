@@ -8,7 +8,7 @@ jQuery( function($) {
 	if ( $('#countdown-wrapper').length )
 	{
 		// Time left to display
-		var timeLeft = Math.floor( ( Date.parse(window.cleanup.next_cleanup) - Date.now() ) / 1000 ),
+		var timeLeft = window.cleanup.time_left,
 		 	interval = window.cleanup.interval;
 
 		var $countdownWrapper = $('#countdown-wrapper'),
@@ -18,7 +18,7 @@ jQuery( function($) {
 		{
 			if ( timeLeft < 0 )
 				return;
-			
+
 			if ( timeLeft <= interval ) {
 				$countdown.html(timeLeft);
 

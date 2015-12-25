@@ -84,6 +84,19 @@ function wud_get_next_cleanup_time()
 	return date( "Y-m-d H:i:s", strtotime( $last_cleanup_time ) + $offset * 3600 );
 }
 
+function wud_get_time_left()
+{
+	global $wpdb;
+
+	$offset 			= wud_setting( 'cleanup_offset' );
+
+	$last_cleanup_time 	= wud_get_last_cleanup_time();
+
+	$now 				= $wpdb->get_var( "SELECT NOW()" );
+
+	return strtotime( $last_cleanup_time ) + $offset * 3600 - strtotime( $now );
+}
+
 /**
  * Remove directory with recursive
  * @param  String $dir Path

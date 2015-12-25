@@ -95,13 +95,12 @@ class Ultimate_Demo
 	 */
 	public function enqueue()
 	{
-		$next_cleanup = wud_get_next_cleanup_time();
-
+		$time_left 	  = wud_get_time_left();
 		$interval 	  = wud_setting( 'countdown_interval' );
 
 		wp_register_script( 'ultimate-demo', WUD_JS_URL . 'ultimate-demo.js', array(), '1.0.0', true );
 		wp_register_style( 'ultimate-demo', WUD_CSS_URL . 'ultimate-demo.css', array(), '1.0.0', 'all' );
-		wp_localize_script( 'ultimate-demo', 'cleanup', compact('next_cleanup', 'interval') );
+		wp_localize_script( 'ultimate-demo', 'cleanup', compact( 'time_left', 'interval' ) );
 		wp_enqueue_script( 'ultimate-demo' );
 		wp_enqueue_style( 'ultimate-demo' );
 	}
