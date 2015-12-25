@@ -82,7 +82,7 @@ class Ultimate_Demo_Settings
 
 		foreach ( wud_default_settings() as $field => $default )
 		{
-			$settings[$field] =  isset( $_POST[$field] ) ? esc_attr( $_POST[$field] ) : '';
+			$settings[$field] =  isset( $_POST[$field] ) ? stripslashes( $_POST[$field] ) : '';
 		}
 
 		$settings['only_show_for'] = get_current_user_id();
@@ -248,7 +248,7 @@ class Ultimate_Demo_Settings
 							<tr valign="top" id="login-message">
                     			<th><?php _e( 'Login Message', 'wud' ); ?></th>
                     			<td>
-                    				<?php $this->textarea( 'login_message', '', array(
+                    				<?php $this->textarea( 'login_message', null, array(
                     					'rows' => 3,
                     					'cols' => 90
                     				) ); ?>
@@ -307,7 +307,7 @@ class Ultimate_Demo_Settings
 			$attributes = $this->make_attributes( $attrs );
 
 		if ( $type !== 'checkbox' && is_null( $value ) )
-			$value = is_null( $value ) ? esc_attr( wud_setting( $name ) ) : '';
+			$value = is_null( $value ) ? wud_setting( $name ) : '';
 
 		$html = "<input type='{$type}' name='{$name}' id='{$name}' value='{$value}' {$attributes}>";
 	
