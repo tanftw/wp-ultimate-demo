@@ -155,7 +155,7 @@ class Ultimate_Demo
 		if ( empty( wud_setting( 'login_message' ) ) )
 			return $message;
 
-		$login_message 	= wud_setting( 'login_message' );
+		$login_message 	= htmlspecialchars_decode( stripslashes( wud_setting( 'login_message' ) ) );
 
 		$message 		=  "<p class='message'>{$login_message}</p>";
 
