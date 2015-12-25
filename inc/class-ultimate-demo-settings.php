@@ -129,7 +129,8 @@ class Ultimate_Demo_Settings
                     					<?php _e( 'Disable demo, unfreeze data, only admin can access and make changes', 'wud' ); ?>
                     				</label>
                     				<p class="description">
-                    					<?php _e( "Notice: You'll probably get logged out after change this setting", 'wud' ); ?>
+                    					<?php _e( "Uncheck this when you're ready to publish your demo<br>
+                    					Notice: You'll probably get logged out after change this setting", 'wud' ); ?>
                     				</p>
                     			</td>
                     		</tr>
