@@ -135,7 +135,11 @@ if ( ! function_exists( 'recurse_copy' ) )
 {
 	function recurse_copy( $source, $dest ) 
 	{
+		if ( ! file_exists( $source ) )
+			return;
+		
 		mkdir($dest, 0755);
+		
 		foreach (
 		 $iterator = new \RecursiveIteratorIterator(
 		  new \RecursiveDirectoryIterator($source, \RecursiveDirectoryIterator::SKIP_DOTS),
