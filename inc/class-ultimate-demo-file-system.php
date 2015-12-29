@@ -11,7 +11,7 @@ class Ultimate_Demo_File_System
 	 * 
 	 * @return String File Path
 	 */
-	private static function get_demo()
+	public static function get_demo()
 	{
 		return ABSPATH . '.demo';
 	}
@@ -21,7 +21,7 @@ class Ultimate_Demo_File_System
 	 * 
 	 * @return String File Path
 	 */
-	private static function get_demo_disabled()
+	public static function get_demo_disabled()
 	{
 		return ABSPATH . '.demo_disabled';
 	}
@@ -50,6 +50,9 @@ class Ultimate_Demo_File_System
 	
 	public static function toggle_demo()
 	{
+		if ( wud_is_demo_active() === ! isset( $_POST['offline_mode'] ) )
+			return;
+
 		if ( isset( $_POST['offline_mode'] ) && $_POST['offline_mode'] == 1 )
 			self::disable_demo();
 
@@ -67,7 +70,7 @@ class Ultimate_Demo_File_System
 	 */
 	public static function enable_demo()
 	{
-		@unlink( self::get_demo_disabled() );
+		unlink( self::get_demo_disabled() );
 
 		if ( ! file_exists( self::get_demo() ) )
 			file_put_contents( self::get_demo(), '' );
@@ -80,7 +83,7 @@ class Ultimate_Demo_File_System
 	 */
 	public static function disable_demo()
 	{
-		@unlink( self::get_demo() );
+		unlink( self::get_demo() );
 
 		if ( ! file_exists( self::get_demo_disabled() ) )
 			file_put_contents( self::get_demo_disabled(), '' );
