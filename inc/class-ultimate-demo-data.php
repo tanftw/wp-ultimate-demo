@@ -145,6 +145,8 @@ class Ultimate_Demo_Data
 		self::turn_on_event_scheduler();
 
 		self::cleanup();
+
+		Ultimate_Demo_File_System::disable_demo();
 	}
 
 	/**
