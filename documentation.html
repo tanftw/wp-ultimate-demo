@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<head lang="en">
+	<meta charset="utf-8">
+	<title>WP Ultimate Demo Documentation</title>
+	<style type="text/css">
+body {font: 13px Verdana, Arial, Helvetica, sans-serif}
+strong {font-weight: bold}
+h1, h2, h3,h4,h5 {font: bold 36px Georgia, "Times New Roman", Times, serif; padding-bottom: 0.5em; margin: 2em 0 1em}
+h2 {font-size: 26px}
+h3 {font-size: 22px}
+h4 {font-size: 19px}
+h5 {font-size: 16px; font-weight: normal}
+p {margin-bottom: 1em; line-height: 1.5em; text-align: justify}
+ul {list-style: disc; padding-left: 20px; margin: 1em 0}
+ol {list-style: decimal; padding-left: 20px}
+code {background: #eee}
+
+.container {width: 960px; margin: 30px auto}
+header, section, footer {display: block}
+
+header h1 {text-align: center}
+
+nav ul {overflow: hidden; margin-bottom: 20px; padding-left: 0}
+nav li {list-style: none; float: left; border-left: 1px solid #ccc; padding: 0 10px}
+nav li:first-child {border-left: none; padding-left: 0}
+
+#info strong {width: 120px; display: inline-block}
+.center{ text-align: center;}
+footer {margin: 15px auto; color: #999; font-size: 11px}
+        
+    </style>
+</head>
+
+
+<body>
+	<div class="container">
+	
+		<h1 class="center">WP Ultimate Demo Documentation</h1>
+		
+		<div class="borderTop">
+			<div class="span-6 colborder info prepend-1">
+				<p class="prepend-top">
+					<strong>
+					By: Tan Nguyen<br>
+					Email: <a href="mailto:tan@binaty.org">tan@binaty.org</a>
+					</strong>
+				</p>
+			</div><!-- end div .span-6 -->		
+	
+			<div class="span-12 last">
+				<p class="prepend-top append-0">Thank you for purchasing my plugin. If you have any questions that are beyond the scope of this help file, please feel free to email via my user page contact form <a href="http://codecanyon/user/binaty">here</a>. <br>
+				For live documentation, please visit our <a href="https://github.com/tanng/wp-ultimate-demo-docs/">Github Wiki</a><br>
+				Thanks so much!</p>
+			</div>
+		</div><!-- end div .borderTop -->
+		
+		<hr>
+		
+		<h2 id="toc" class="alt">Table of Contents</h2>
+		<ol>
+			<li><a href="#installation">Installation</a></li>
+			<li><a href="#configurations">Configurations</a></li>
+			<li><a href="#advanced-configurations">Advanced Configurations</a></li>
+			<li><a href="#uninstallation">Uninstallation</a></li>
+			<li><a href="#change-logs">Change Logs</a></li>
+		</ol>
+		
+		<hr>
+		
+
+		<h3 id="installation"><strong>1. Installation</strong> - <a href="#toc">top</a></h3>
+        
+        <h4>Site Requirements</h4>
+		<p>
+            WP Ultimate Demo has tested and compatibility with
+            <ul>
+                <li>WordPress 3.9+</li>
+                <li>PHP 5.2+</li>
+                <li>It's recommended that you not run your demo website on same server with your other production websites.</li>
+            </ul>
+           
+        </p>
+
+		<h4>Preinstall</h4>
+		<ul>
+		    <li>Make sure you have backed up your database before install</li>
+		</ul>
+		
+		
+		<h4>Installation</h4>
+        <ol>
+            <li>Download <code>wp-ultimate-demo.zip</code> and unzip the package</li>
+            <li>Upload <code>wp-ultimate-demo</code> folder to the <code>wp-content/plugins/</code> directory</li>
+            <li>Activate the plugin through the Plugins menu in WordPress</li>
+            <li>Start using the plugin through the menu <code>Settings\WP Ultimate Demo</code></li>
+        </ol>
+
+		<hr>
+		
+		<h3 id="configurations"><strong>2. Configuration</strong> - <a href="#toc">top</a></h3>
+		
+		<p>To change WP Ultimate Demo settings, simply go to <code>Dashboard\Settings\WP Ultimate Demo</code></p>
+		
+		<h4>General Settings</h4>
+		
+		<h5>Offline Mode</h5>
+		<p>After plugin setup, Offline Mode is turned on to wait you change settings on the first run. When in offline mode, users with specified roles can modify and update your site (of course files, plugins and themes also if they have permission). Otherwise, when Offline Mode is turned off, the cleanup will clean all changes in your specified time (default: each 24 hours).</p>
+
+    	<p>If you want to change this plugin settings, you have to switch to Offline Mode.</p>
+       <p><strong>In short</strong>, uncheck Offline Mode when you want to publish the demo and check Offline Mode when you want to make changes.</p>
+        </p>
+        
+        <h4>Security</h4>
+        <p>There're two options in this section which turned on by default while they are recommended settings.</p>
+    
+       <p>
+        <strong><em>Don't let users modify your files, upgrade website, themes, and plugins</em></strong><br>
+This will stop your users from change your files, update website, themes and plugins like that description whilst Offline Mode is turning on.<br>
+       <em>If you already use CHMOD, set <code>wp-config.php</code> constants, or use other plugins and methods to prevent users modify your files, you can ignore this option.</em>
+    </p>
+
+
+        <p><strong><em>Hide this plugin from any one except me</em></strong><br>
+If this option is turned off, anyone with Administrator role can access this area, switch WP Ultimate Demo to Offline Mode and make changes. So it's recommended that you always turn on this option or check permission carefully when you give your demo users credentials.
+		</p>
+		
+		<h4>Data Cleanup</h4>
+    <p>By default, WP Ultimate Demo cleanups your database each day at <time>00:00</time>. But you can change this option to make cleanup runs more or less frequently. For example, if you set to <code>2</code>, that means this will run each two hours.</p>
+
+        <h4>Countdown</h4>
+        <p>Countdown is a cool feature of WP Ultimate Demo which displays a countdown bar with your custom message template if users session is going to expired in <code>x</code> seconds. Please remember place <code>%time%</code> variable so countdown can works properly.</p>
+
+    <h4> Login Settings</h4>
+
+<h5> Auto Login</h5>
+This option contains <code>Disable</code>, <code>Enable</code> and <code>Prefill</code>.
+<ul>
+    <li><code>Disable</code>: Nothing happened, you give your users credentials, then they use it to login to your website.</li>
+    <li><code>Enable</code>: You can select an user, then anyone can bypass login form with this credential. Remember that you can still use login form to login with other user.</li>
+    <li><code>Prefill</code>: You fill the user name and password, then the login form will auto fill this credential by default.</li>
+</ul>
+<h5> Login Message</h5>
+<p>
+Like this title and description, you can put your custom message in the top of login form below your logo to make more impressive for your users.
+</p>
+<h5> Manual Cleanup Data</h5>
+<p>
+Hit <code>Cleanup</code> button, all changes in your demo website are reverted back to your time you edit in Offline Mode.
+   </p> 
+		
+		<hr>
+		
+		<h3 id="advanced-configurations"><strong>3. Advanced Configurations</strong> - <a href="#toc">top</a></h3>
+		
+		<h4>Toggle Offline Mode Advanced</h4>
+
+        <p>Sometimes, WP Ultimate Demo can't touch to your files to toggle offline mode because your files permissions. You can still change this setting by creating <code>.demo</code> or <code>.demo_disabled</code> in your wp root directory represent the plugin state.
+
+<code>.demo</code> means Offline mode is turn on <code>.demo_disabled</code> mean Offline mode is turned off
+        </p>
+       
+        <h4>Detect Offline Mode</h4>
+ <p>
+        If you want to check Offline Mode in your theme or plugin, just use <code>wud_is_demo_active()</code> function. This will return true when Offline mode is turned on, otherwise return false
+		</p>
+		
+		<hr>
+		
+		<h3 id="uninstallation"><strong>4. Uninstallation</strong> - <a href="#toc">top</a></h3>
+		
+		<p>Before uninstall, make sure you've backed up your website.</p>
+
+        <p>If you've set <em>Hide this plugin from any one except me option</em> in Security section. Make sure you're accessed with right user to deactivate this plugin.</p>
+
+        <p>Go to <code>Plugins\Installed Plugins</code>, locate to <strong>WP Ultimate Demo</strong> and click "Deactivate". This will cleanup all demo data, remove all WP Ultimate Demo settings and turn off demo.</p>
+		<hr>
+
+		<h3 id="change-logs"><strong>5. Change Logs - <a href="#toc">top</a></strong></h3>
+		<strong>Version 1.0.1 - 29th Dec, 2015</strong>
+		<ul>
+			<li><strong>Improvement</strong> Better message when plugin unable to create <code>.demo</code> and <code>.demo_disabled</code> due to system permission</li>
+			<li><strong>Bug Fix</strong> Error when no <code>wp-content/uploads</code> directory</li>
+			<li><strong>Bug Fix</strong> Compatibility issue with PHP 5.2</li>
+		</ul>
+
+		<strong>Version 1.0 - 26th Dec, 2015</strong>
+		<ul>
+			<li>Initial Release</li>
+		</ul>
+
+		<footer>
+            Copyright &copy; 2016 Binaty
+            
+		    <p><a href="#toc">Go To Table of Contents</a></p>
+		</footer>
+		<hr class="space">
+	</div><!-- end div .container -->
+</body>
+</html>
