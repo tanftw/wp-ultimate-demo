@@ -133,21 +133,20 @@ if ( ! function_exists( 'rrmdir' ) )
  */
 if ( ! function_exists( 'recurse_copy' ) )
 {
-	function recurse_copy( $src, $dst ) 
-	{ 
-	    $dir = opendir($src); 
-	    @mkdir($dst); 
-	    while(false !== ( $file = readdir($dir)) ) { 
-	        if (( $file != '.' ) && ( $file != '..' )) { 
-	            if ( is_dir($src . '/' . $file) ) { 
-	                recurse_copy($src . '/' . $file,$dst . '/' . $file); 
-	            } 
-	            else { 
-	                copy($src . '/' . $file,$dst . '/' . $file); 
-	            } 
-	        } 
-	    } 
-	    closedir($dir); 
+	function recurse_copy( $source, $dest ) 
+	{
+		mkdir($dest, 0755);
+		foreach (
+		 $iterator = new \RecursiveIteratorIterator(
+		  new \RecursiveDirectoryIterator($source, \RecursiveDirectoryIterator::SKIP_DOTS),
+		  \RecursiveIteratorIterator::SELF_FIRST) as $item
+		) {
+		  if ($item->isDir()) {
+		    mkdir($dest . DIRECTORY_SEPARATOR . $iterator->getSubPathName());
+		  } else {
+		    copy($item, $dest . DIRECTORY_SEPARATOR . $iterator->getSubPathName());
+		  }
+		}
 	}
 }
 
