@@ -112,7 +112,7 @@ class Ultimate_Demo_Settings
 		<?php endif; ?>
 
 
-		<?php if ( ! is_writeable( Ultimate_Demo_File_System::get_demo() ) || ! is_writable( Ultimate_Demo_File_System::get_demo_disabled() ) ) : ?>
+		<?php if ( ! is_writable( Ultimate_Demo_File_System::get_demo() ) && ! is_writable( Ultimate_Demo_File_System::get_demo_disabled() ) ) : ?>
 		
 		<div class="notice update-nag is-dismissable">
 			<p>
