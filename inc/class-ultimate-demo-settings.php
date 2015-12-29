@@ -144,7 +144,7 @@ class Ultimate_Demo_Settings
                     				</label>
                     				<p class="description">
                     					<?php _e( "Uncheck this when you're ready to publish your demo<br>
-                    					Notice: You'll probably get logged out after change this setting", 'wud' ); ?>
+                    					Notice: You'll probably get logged out after change this setting. In case you've logged out. Try to login again.", 'wud' ); ?>
                     				</p>
 
                     			</td>
@@ -167,7 +167,7 @@ class Ultimate_Demo_Settings
                     				<p>
                     				<label>
                     					<?php $this->checkbox( 'disable_file_editing' ); ?>
-                    					<?php _e( "Don't let users modify your files, upgrade website, themes, and plugins <code>Recommended</code>", 'wud' ); ?>
+                    					<?php _e( "Don't let users modify my files, upgrade website, themes, and plugins <code>Recommended</code>", 'wud' ); ?>
                     				</label>
                     				</p>
 

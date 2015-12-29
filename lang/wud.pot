@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: WP Ultimate Demo\n"
-"POT-Creation-Date: 2015-12-29 18:37+0700\n"
+"POT-Creation-Date: 2015-12-29 20:08+0700\n"
 "PO-Revision-Date: 2015-12-23 11:03+0700\n"
 "Last-Translator: \n"
 "Language-Team: Binaty <tan@binaty.org>\n"
@@ -49,7 +49,7 @@ msgstr ""
 #: inc/class-ultimate-demo-settings.php:146
 msgid ""
 "Uncheck this when you're ready to publish your demo<br>\n"
-"                    \t\t\t\t\tNotice: You'll probably get logged out after change this setting"
+"                    \t\t\t\t\tNotice: You'll probably get logged out after change this setting. In case you've logged out. Try to login again."
 msgstr ""
 
 #: inc/class-ultimate-demo-settings.php:157
@@ -61,7 +61,7 @@ msgid "Security"
 msgstr ""
 
 #: inc/class-ultimate-demo-settings.php:170
-msgid "Don't let users modify your files, upgrade website, themes, and plugins <code>Recommended</code>"
+msgid "Don't let users modify my files, upgrade website, themes, and plugins <code>Recommended</code>"
 msgstr ""
 
 #: inc/class-ultimate-demo-settings.php:177
