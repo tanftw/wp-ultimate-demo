@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: WP Ultimate Demo\n"
-"POT-Creation-Date: 2015-12-23 11:05+0700\n"
+"POT-Creation-Date: 2015-12-29 18:37+0700\n"
 "PO-Revision-Date: 2015-12-23 11:03+0700\n"
 "Last-Translator: \n"
 "Language-Team: Binaty <tan@binaty.org>\n"
@@ -16,133 +16,143 @@ msgstr ""
 "X-Poedit-KeywordsList: _e;__;_n\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: inc/class-ultimate-demo-settings.php:39
-#: inc/class-ultimate-demo-settings.php:40
-#: inc/class-ultimate-demo-settings.php:102
+#: inc/class-ultimate-demo-settings.php:41
+#: inc/class-ultimate-demo-settings.php:42
+#: inc/class-ultimate-demo-settings.php:103
 msgid "WP Ultimate Demo"
 msgstr ""
 
-#: inc/class-ultimate-demo-settings.php:108
+#: inc/class-ultimate-demo-settings.php:109
 msgid "Settings <strong>saved</strong>."
 msgstr ""
 
 #: inc/class-ultimate-demo-settings.php:119
+msgid ""
+"If your <code>.demo</code> and <code>.demo_disabled</code> files were writable, we could do it automatically, \n"
+"\t\t\t\t\tbut they aren't so you should have to create <code>.demo</code> or <code>.demo_disabled</code> in same directory\n"
+"\t\t\t\t\twith .htaccess which represent your site state to toggle offline mode.\n"
+"\t\t\t\t"
+msgstr ""
+
+#: inc/class-ultimate-demo-settings.php:135
 msgid "General"
 msgstr ""
 
-#: inc/class-ultimate-demo-settings.php:123
+#: inc/class-ultimate-demo-settings.php:139
 msgid "Offline Mode"
 msgstr ""
 
-#: inc/class-ultimate-demo-settings.php:127
+#: inc/class-ultimate-demo-settings.php:143
 msgid "Disable demo, unfreeze data, only admin can access and make changes"
 msgstr ""
 
-#: inc/class-ultimate-demo-settings.php:130
-msgid "Notice: You'll probably get logged out after change this setting"
+#: inc/class-ultimate-demo-settings.php:146
+msgid ""
+"Uncheck this when you're ready to publish your demo<br>\n"
+"                    \t\t\t\t\tNotice: You'll probably get logged out after change this setting"
 msgstr ""
 
-#: inc/class-ultimate-demo-settings.php:139
+#: inc/class-ultimate-demo-settings.php:157
 msgid "All demo options are hidden in online mode. Switch to <strong>Offline mode</strong> to change demo settings."
 msgstr ""
 
-#: inc/class-ultimate-demo-settings.php:147
+#: inc/class-ultimate-demo-settings.php:165
 msgid "Security"
 msgstr ""
 
-#: inc/class-ultimate-demo-settings.php:152
+#: inc/class-ultimate-demo-settings.php:170
 msgid "Don't let users modify your files, upgrade website, themes, and plugins <code>Recommended</code>"
 msgstr ""
 
-#: inc/class-ultimate-demo-settings.php:159
+#: inc/class-ultimate-demo-settings.php:177
 msgid "Hide this plugin from any one except me <code>Recommended</code>"
 msgstr ""
 
-#: inc/class-ultimate-demo-settings.php:166
+#: inc/class-ultimate-demo-settings.php:184
 msgid "Data Cleanup"
 msgstr ""
 
-#: inc/class-ultimate-demo-settings.php:169
+#: inc/class-ultimate-demo-settings.php:187
 msgid "Auto cleanup data after (hours)"
 msgstr ""
 
-#: inc/class-ultimate-demo-settings.php:175
+#: inc/class-ultimate-demo-settings.php:193
 msgid "Countdown"
 msgstr ""
 
-#: inc/class-ultimate-demo-settings.php:179
+#: inc/class-ultimate-demo-settings.php:197
 msgid "Show countdown bar when session is going to expired"
 msgstr ""
 
-#: inc/class-ultimate-demo-settings.php:180
+#: inc/class-ultimate-demo-settings.php:198
 msgid "in"
 msgstr ""
 
-#: inc/class-ultimate-demo-settings.php:182
+#: inc/class-ultimate-demo-settings.php:200
 msgid "seconds"
 msgstr ""
 
-#: inc/class-ultimate-demo-settings.php:186
+#: inc/class-ultimate-demo-settings.php:204
 msgid "With Template"
 msgstr ""
 
-#: inc/class-ultimate-demo-settings.php:205
+#: inc/class-ultimate-demo-settings.php:223
 msgid "Login"
 msgstr ""
 
-#: inc/class-ultimate-demo-settings.php:209
+#: inc/class-ultimate-demo-settings.php:227
 msgid "Auto Login"
 msgstr ""
 
-#: inc/class-ultimate-demo-settings.php:214
+#: inc/class-ultimate-demo-settings.php:232
 msgid "Disable"
 msgstr ""
 
-#: inc/class-ultimate-demo-settings.php:215
+#: inc/class-ultimate-demo-settings.php:233
 msgid "Enable"
 msgstr ""
 
-#: inc/class-ultimate-demo-settings.php:216
+#: inc/class-ultimate-demo-settings.php:234
 msgid "Prefill"
 msgstr ""
 
-#: inc/class-ultimate-demo-settings.php:221
+#: inc/class-ultimate-demo-settings.php:239
 msgid "If <b>enable</b>, any one can bypass login form. <br> If you choose <b>prefill</b>, the login form is prefilled, users don't have to enter user name and password"
 msgstr ""
 
-#: inc/class-ultimate-demo-settings.php:227
+#: inc/class-ultimate-demo-settings.php:245
 msgid "Auto Login with User"
 msgstr ""
 
-#: inc/class-ultimate-demo-settings.php:239
+#: inc/class-ultimate-demo-settings.php:257
 msgid "Prefill Settings"
 msgstr ""
 
-#: inc/class-ultimate-demo-settings.php:241
+#: inc/class-ultimate-demo-settings.php:259
 msgid "User Login"
 msgstr ""
 
-#: inc/class-ultimate-demo-settings.php:242
+#: inc/class-ultimate-demo-settings.php:260
 msgid "User Password"
 msgstr ""
 
-#: inc/class-ultimate-demo-settings.php:247
+#: inc/class-ultimate-demo-settings.php:265
 msgid "Login Message"
 msgstr ""
 
-#: inc/class-ultimate-demo-settings.php:254
+#: inc/class-ultimate-demo-settings.php:272
 msgid "Print login message on the top of login form. Leaves blank to disable this feature"
 msgstr ""
 
-#: inc/class-ultimate-demo-settings.php:266
+#: inc/class-ultimate-demo-settings.php:284
 msgid "Manual Cleanup Data"
 msgstr ""
 
-#: inc/class-ultimate-demo-settings.php:272
+#: inc/class-ultimate-demo-settings.php:290
 msgid "Cleanup"
 msgstr ""
 
-#: inc/class-ultimate-demo-settings.php:273
+#: inc/class-ultimate-demo-settings.php:291
 msgid "Cleanup all user entered demo data. Take website back to your last modified time."
 msgstr ""
 

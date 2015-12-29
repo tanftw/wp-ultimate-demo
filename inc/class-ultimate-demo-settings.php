@@ -90,7 +90,6 @@ class Ultimate_Demo_Settings
 		update_option( 'ultimate_demo', $settings );
 		$wpdb->query( "UPDATE wuddemo_options SET option_value = '" . serialize( $settings ) . "' WHERE option_name = 'ultimate_demo'" );
 
-
 		// Redirect with success message
 		$_POST['_wp_http_referer'] = add_query_arg( 'success', 'true', $_POST['_wp_http_referer'] );
 		wp_redirect( $_POST['_wp_http_referer'] );
@@ -110,6 +109,21 @@ class Ultimate_Demo_Settings
 			<p><?php _e( 'Settings <strong>saved</strong>.', 'wud' ); ?></p>
 			<button type="button" class="notice-dismiss"><span class="screen-reader-text">Dismiss this notice.</span></button>
 		</div>
+		<?php endif; ?>
+
+
+		<?php if ( ! is_writeable( Ultimate_Demo_File_System::get_demo() ) || ! is_writable( Ultimate_Demo_File_System::get_demo_disabled() ) ) : ?>
+		
+		<div class="notice update-nag is-dismissable">
+			<p>
+			<?php	_e( "If your <code>.demo</code> and <code>.demo_disabled</code> files were writable, we could do it automatically, 
+					but they aren't so you should have to create <code>.demo</code> or <code>.demo_disabled</code> in same directory
+					with .htaccess which represent your site state to toggle offline mode.
+				");
+			?>
+			</p>
+		</div>
+		
 		<?php endif; ?>
 
 		<form method="post" action="options.php" id="poststuff">
@@ -132,6 +146,7 @@ class Ultimate_Demo_Settings
                     					<?php _e( "Uncheck this when you're ready to publish your demo<br>
                     					Notice: You'll probably get logged out after change this setting", 'wud' ); ?>
                     				</p>
+
                     			</td>
                     		</tr>
 
