@@ -277,30 +277,29 @@ class Ultimate_Demo_Settings
                   	</div><!--.inside-->
               	</div><!--.postbox-->
             </div><!--.meta-box-sortables-->
-
-            <div class="meta-box-sortables">
-              	<div class="postbox">
-                	<div class="handlediv" title="Click to toggle"> <br></div>
-                  	<h3 class="hndle ui-sortable-handle"><?php _e( 'Manual Cleanup Data', 'wud' ); ?></h3>
-                  	<div class="inside">
-                    	<table class="form-table">
-                    		<tr valign="top">
-                    			<th></th>
-                    			<td>
-                    				<a href="<?php echo esc_url( add_query_arg('cleanup', 1) ); ?>" class="button"><?php _e( 'Cleanup', 'wud' ); ?></a>
-                    				<p class="description"><?php _e( 'Cleanup all user entered demo data. Take website back to your last modified time.', 'wud' ); ?></p>
-                    			</td>
-                    		</tr>
-                    	</table>
-                  	</div><!--.inside-->
-              	</div><!--.postbox-->
-            </div><!--.meta-box-sortables-->
-			
 			<?php endif; ?>
 			
+			<div class="meta-box-sortables">
+	          	<div class="postbox">
+	            	<div class="handlediv" title="Click to toggle"> <br></div>
+	              	<h3 class="hndle ui-sortable-handle"><?php _e( 'Manual Cleanup Data', 'wud' ); ?></h3>
+	              	<div class="inside">
+	                	<table class="form-table">
+	                		<tr valign="top">
+	                			<th></th>
+	                			<td>
+	                				<a href="<?php echo esc_url( add_query_arg('cleanup', 1) ); ?>" class="button"><?php _e( 'Cleanup', 'wud' ); ?></a>
+	                				<p class="description"><?php _e( 'Cleanup all user entered demo data. Take website back to your last modified time.', 'wud' ); ?></p>
+	                			</td>
+	                		</tr>
+	                	</table>
+	              	</div><!--.inside-->
+	          	</div><!--.postbox-->
+	        </div><!--.meta-box-sortables-->
+
 			<input type="hidden" name="_page_now" value="ultimate-demo">
 		    <?php submit_button(); ?>
-		</form>
+			</form>
 		</div>
 		<?php
 	}
