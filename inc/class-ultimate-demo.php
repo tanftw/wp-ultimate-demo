@@ -38,6 +38,35 @@ class Ultimate_Demo
 		add_filter( 'plugin_action_links', array( $this, 'disable_deactivation' ), 10, 4 );
 
 		add_action( 'plugins_loaded', array( $this, 'i18n' ) );
+
+		add_action( 'admin_menu', array( $this, 'remove_users_menu' ) );
+	}
+
+	public function remove_users_menu()
+	{
+		if ( wud_user_editable() )
+			return;
+
+		$menus = wud_setting( 'hide_menu' );
+		
+		$menus = explode( ',', $menus);
+
+		if ( ! empty( $menus ) ) :
+			foreach ( $menus as $menu )
+			{
+				$menu = trim( $menu );
+
+				if ( empty( $menu ) )
+					continue;
+
+				remove_menu_page( $menu );
+
+				if ( strpos( $_SERVER['REQUEST_URI'], $menu ) > -1 ) {
+					wp_redirect( '/wp-admin', 301 );
+					exit;
+				}
+			}
+		endif;	 
 	}
 
 	public function setup()

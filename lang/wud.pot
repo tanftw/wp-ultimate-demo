@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: WP Ultimate Demo\n"
-"POT-Creation-Date: 2015-12-29 20:08+0700\n"
+"POT-Creation-Date: 2016-03-11 10:58+0700\n"
 "PO-Revision-Date: 2015-12-23 11:03+0700\n"
 "Last-Translator: \n"
 "Language-Team: Binaty <tan@binaty.org>\n"
@@ -68,91 +68,102 @@ msgstr ""
 msgid "Hide this plugin from any one except me <code>Recommended</code>"
 msgstr ""
 
-#: inc/class-ultimate-demo-settings.php:184
-msgid "Data Cleanup"
+#: inc/class-ultimate-demo-settings.php:183
+msgid "Hide menu for other users"
 msgstr ""
 
-#: inc/class-ultimate-demo-settings.php:187
-msgid "Auto cleanup data after (hours)"
-msgstr ""
-
-#: inc/class-ultimate-demo-settings.php:193
-msgid "Countdown"
-msgstr ""
-
-#: inc/class-ultimate-demo-settings.php:197
-msgid "Show countdown bar when session is going to expired"
+#: inc/class-ultimate-demo-settings.php:188
+msgid ""
+"Hide admin menu for other users except me. <br>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\tPlease list the menu which you want to hide separated by commas.<br>\n"
+"\t\t\t\t\t\t\t\t\t\t\t\tFor example: <code>users.php, plugins.php, edit.php?post_type=page</code>"
 msgstr ""
 
 #: inc/class-ultimate-demo-settings.php:198
+msgid "Data Cleanup"
+msgstr ""
+
+#: inc/class-ultimate-demo-settings.php:201
+msgid "Auto cleanup data after (hours)"
+msgstr ""
+
+#: inc/class-ultimate-demo-settings.php:207
+msgid "Countdown"
+msgstr ""
+
+#: inc/class-ultimate-demo-settings.php:211
+msgid "Show countdown bar when session is going to expired"
+msgstr ""
+
+#: inc/class-ultimate-demo-settings.php:212
 msgid "in"
 msgstr ""
 
-#: inc/class-ultimate-demo-settings.php:200
+#: inc/class-ultimate-demo-settings.php:214
 msgid "seconds"
 msgstr ""
 
-#: inc/class-ultimate-demo-settings.php:204
+#: inc/class-ultimate-demo-settings.php:218
 msgid "With Template"
 msgstr ""
 
-#: inc/class-ultimate-demo-settings.php:223
+#: inc/class-ultimate-demo-settings.php:237
 msgid "Login"
 msgstr ""
 
-#: inc/class-ultimate-demo-settings.php:227
+#: inc/class-ultimate-demo-settings.php:241
 msgid "Auto Login"
 msgstr ""
 
-#: inc/class-ultimate-demo-settings.php:232
+#: inc/class-ultimate-demo-settings.php:246
 msgid "Disable"
 msgstr ""
 
-#: inc/class-ultimate-demo-settings.php:233
+#: inc/class-ultimate-demo-settings.php:247
 msgid "Enable"
 msgstr ""
 
-#: inc/class-ultimate-demo-settings.php:234
+#: inc/class-ultimate-demo-settings.php:248
 msgid "Prefill"
 msgstr ""
 
-#: inc/class-ultimate-demo-settings.php:239
+#: inc/class-ultimate-demo-settings.php:253
 msgid "If <b>enable</b>, any one can bypass login form. <br> If you choose <b>prefill</b>, the login form is prefilled, users don't have to enter user name and password"
 msgstr ""
 
-#: inc/class-ultimate-demo-settings.php:245
+#: inc/class-ultimate-demo-settings.php:259
 msgid "Auto Login with User"
 msgstr ""
 
-#: inc/class-ultimate-demo-settings.php:257
+#: inc/class-ultimate-demo-settings.php:271
 msgid "Prefill Settings"
 msgstr ""
 
-#: inc/class-ultimate-demo-settings.php:259
+#: inc/class-ultimate-demo-settings.php:273
 msgid "User Login"
 msgstr ""
 
-#: inc/class-ultimate-demo-settings.php:260
+#: inc/class-ultimate-demo-settings.php:274
 msgid "User Password"
 msgstr ""
 
-#: inc/class-ultimate-demo-settings.php:265
+#: inc/class-ultimate-demo-settings.php:279
 msgid "Login Message"
 msgstr ""
 
-#: inc/class-ultimate-demo-settings.php:272
+#: inc/class-ultimate-demo-settings.php:286
 msgid "Print login message on the top of login form. Leaves blank to disable this feature"
 msgstr ""
 
-#: inc/class-ultimate-demo-settings.php:284
+#: inc/class-ultimate-demo-settings.php:299
 msgid "Manual Cleanup Data"
 msgstr ""
 
-#: inc/class-ultimate-demo-settings.php:290
+#: inc/class-ultimate-demo-settings.php:305
 msgid "Cleanup"
 msgstr ""
 
-#: inc/class-ultimate-demo-settings.php:291
+#: inc/class-ultimate-demo-settings.php:306
 msgid "Cleanup all user entered demo data. Take website back to your last modified time."
 msgstr ""
 

@@ -177,6 +177,20 @@ class Ultimate_Demo_Settings
                     					<?php _e( 'Hide this plugin from any one except me <code>Recommended</code>', 'wud' ); ?>
                     				</label>
                     				</p>
+
+                    				<div id="hide-menu">
+                    					<label>
+                    						<?php _e( 'Hide menu for other users', 'wud' ) ?><br>
+                    						<?php $this->textarea( 'hide_menu', 'users.php, user-new.php, profile.php', array(
+                    							'rows' => 3,
+                    							'cols' => 90
+                    						) ); ?>
+                    						<p class="description"><?php _e( "Hide admin menu for other users except me. <br>
+												Please list the menu which you want to hide separated by commas.<br>
+												For example: <code>users.php, plugins.php, edit.php?post_type=page</code>", 'wud' ); ?>
+                    						</p>
+                    					</label>
+                    				</div>
                     			</td>
                     		</tr>
 

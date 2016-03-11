@@ -3,7 +3,7 @@
 Plugin Name: WP Ultimate Demo
 Plugin URI: https://binaty.org/plugins/wp-ultimate-demo
 Description: Seamless & Fast WP Demo Solution. Just click and run.
-Version: 1.0.2
+Version: 1.1
 Author: Tan Nguyen <tan@binaty.org>
 Text Domain: wud
 License: GPL2+

@@ -8,8 +8,8 @@ jQuery( function($) {
 	if ( $('#countdown-wrapper').length )
 	{
 		// Time left to display
-		var timeLeft = Number(window.cleanup.time_left),
-		 	interval = Number(window.cleanup.interval);
+		var timeLeft = parseInt(window.cleanup.time_left),
+		 	interval = parseInt(window.cleanup.interval);
 
 		var $countdownWrapper = $('#countdown-wrapper'),
 			$countdown 		  = $('#countdown');
@@ -33,9 +33,9 @@ jQuery( function($) {
 		}, 1000);
 	}
 
-	function setShowCountdownVisibility()
-	{
-		if ( $( '#show_countdown' ).is(':checked') )
+	// Settings Conditional Logic
+	$( '#show_countdown' ).change(function() {
+		if ( $( this ).is(':checked') )
 		{
 			$( '#show-countdown-child-condition' ).show();
 		}
@@ -43,10 +43,9 @@ jQuery( function($) {
 		{
 			$( '#show-countdown-child-condition' ).hide();
 		}
-	}
+	} );
 
-	function setLoginVisibility()
-	{
+	$('#auto_login').change(function () {
 		var thisVal = $( '#auto_login' ).val();
 
 		if ( thisVal == 0 )
@@ -63,20 +62,19 @@ jQuery( function($) {
 			$( '#auto-login-as' ).hide();
 			$( '#prefill-settings' ).show();
 		}
-	}
-
-	setShowCountdownVisibility();
-	setLoginVisibility();
-
-	// Settings Conditional Logic
-	$( '#show_countdown' ).change(function()
-	{
-		setShowCountdownVisibility();
 	} );
 
-	$('#auto_login').change(function () 
-	{
-		setLoginVisibility();
-	} );
+	$('#hide_from_anyone').change(function() {
+		if ( $( this ).is(':checked') )
+		{
+			$( '#hide-menu' ).show();
+		}
+		else
+		{
+			$( '#hide-menu' ).hide();
+		}
+	});
+
+	$('#show_countdown, #auto_login, #hide_from_anyone').trigger('change');
 
 } );

@@ -111,7 +111,7 @@ footer {margin: 15px auto; color: #999; font-size: 11px}
         </p>
         
         <h4>Security</h4>
-        <p>There're two options in this section which turned on by default while they are recommended settings.</p>
+        <p>There're 3 options in this section which turned on by default while they are recommended settings.</p>
     
        <p>
         <strong><em>Don't let users modify your files, upgrade website, themes, and plugins</em></strong><br>
@@ -122,6 +122,11 @@ This will stop your users from change your files, update website, themes and plu
 
         <p><strong><em>Hide this plugin from any one except me</em></strong><br>
 If this option is turned off, anyone with Administrator role can access this area, switch WP Ultimate Demo to Offline Mode and make changes. So it's recommended that you always turn on this option or check permission carefully when you give your demo users credentials.
+		</p>
+
+		<p>
+			<strong><em>Hide admin menu</em></strong><br>
+			Since 1.1, you can list all menu items which you want to hide to this text box separated by commas. It will hide menu items from all users except you, and if they try to access those menu via URL, it will redirect to <code>/wp-admin</code>
 		</p>
 		
 		<h4>Data Cleanup</h4>
@@ -179,7 +184,7 @@ Hit <code>Cleanup</code> button, all changes in your demo website are reverted b
 		<strong>Version 1.0.2 - 26th Feb, 2016</strong>
 		<ul>
 			<li><strong>Improvement</strong> You can cleanup data in Online Mode</li>
-			<li><strong>Bug Fix</strong> <code>$wpdb</code> are not defined in some PHP version</li>
+			<li><strong>Bug Fix</strong> <code>$wpdb</code> are not defined in some PHP versions</li>
 			<li><strong>Bug Fix</strong> Countdown bar always shows in some case</li>
 		</ul>
 

@@ -29,7 +29,8 @@ function wud_default_settings()
 		'user_pass'				=> '',
 		'login_message'			=> '',
 		'hide_from_anyone'		=> true,
-		'only_show_for'			=> get_current_user_id()
+		'only_show_for'			=> get_current_user_id(),
+		'hide_menu'				=> 'users.php'
 	);
 }
 
