@@ -71,9 +71,6 @@ class Ultimate_Demo_Settings
 		if ( ! current_user_can( 'manage_options' ) || wud_user_uneditable() )
 			wp_die( 'Cheating???' );
 
-		// Toggle demo if offline mode is checked
-		Ultimate_Demo_File_System::toggle_demo();
-
 		// Change event offset if cleanup offset is changed
 		if ( $_POST['cleanup_offset'] != wud_setting( 'cleanup_offset' ) && is_numeric( $_POST['cleanup_offset'] ) )
 			Ultimate_Demo_Data::setup_event( intval( $_POST['cleanup_offset'] ) );
@@ -88,7 +85,13 @@ class Ultimate_Demo_Settings
 		$settings['only_show_for'] = get_current_user_id();
 
 		update_option( 'ultimate_demo', $settings );
+		
 		$wpdb->query( "UPDATE wuddemo_options SET option_value = '" . serialize( $settings ) . "' WHERE option_name = 'ultimate_demo'" );
+
+		// Toggle demo if offline mode is checked
+		Ultimate_Demo_File_System::toggle_demo();
+
+        Ultimate_Demo_Data::cleanup();
 
 		// Redirect with success message
 		$_POST['_wp_http_referer'] = add_query_arg( 'success', 'true', $_POST['_wp_http_referer'] );
@@ -181,7 +184,7 @@ class Ultimate_Demo_Settings
                     				<div id="hide-menu">
                     					<label>
                     						<?php _e( 'Hide menu for other users', 'wud' ) ?><br>
-                    						<?php $this->textarea( 'hide_menu', 'users.php, user-new.php, profile.php', array(
+                    						<?php $this->textarea( 'hide_menu', null, array(
                     							'rows' => 3,
                     							'cols' => 90
                     						) ); ?>
