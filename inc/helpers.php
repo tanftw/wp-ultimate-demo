@@ -30,7 +30,7 @@ function wud_default_settings()
 		'login_message'			=> '',
 		'hide_from_anyone'		=> true,
 		'only_show_for'			=> get_current_user_id(),
-		'hide_menu'				=> 'users.php'
+		'hide_menu'				=> 'users.php, user-new.php, profile.php'
 	);
 }
 
